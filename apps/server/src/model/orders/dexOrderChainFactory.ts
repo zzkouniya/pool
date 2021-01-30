@@ -76,9 +76,6 @@ export class DexOrderChainFactory {
 
     const nextCell = this.matchNextOrderCell(nextTx, inputOutPoint);
     orderCell.nextOrderCell = nextCell;
-    // console.log(inputOutPoint);
-    // console.log(nextCell.tx.transaction.hash);
-
     if (!this.nextCellIsOrderCell(orderCell, nextCell)) {
       return orderCell;
     }
